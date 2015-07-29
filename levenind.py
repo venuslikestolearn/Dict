@@ -122,7 +122,8 @@ def createDictionary(MemDict,Dictionary,lenDict):
 				MemDict[boolVector]=[wordDict]
 
 def findLeven(Candit,words,obj):
-	d=11
+	d=int(float(len(words.strip()))*0.5)+1
+	print(d)
 	for item in Candit:
 		dd=levenshtein(''.join(item),words.strip())
 		if dd<d:
