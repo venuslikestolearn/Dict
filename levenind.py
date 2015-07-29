@@ -123,7 +123,7 @@ def createDictionary(MemDict,Dictionary,lenDict):
 
 def findLeven(Candit,words,obj):
 	d=int(float(len(words.strip()))*0.5)+1
-	print(d)
+	#print(d)
 	for item in Candit:
 		dd=levenshtein(''.join(item),words.strip())
 		if dd<d:
@@ -183,7 +183,7 @@ if __name__ == "__main__":
 									#print("Time for findLeven")
 									d,obj=findLeven(Candit,words,obj)
 									#d=timeof(findLeven,Candit,words,obj)
-									tolerance=11
+									tolerance=int(float(len(words.strip()))*0.5)+1
 									if d<=tolerance:
 										o.write(''.join(obj)+' ')
 										if d==0:
